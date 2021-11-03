@@ -1,3 +1,7 @@
-output "s3_website" {
-  value = "http://www.${local.domain_name}.s3-website.eu-central-1.amazonaws.com/"
+output "website_bucket" {
+  value = aws_s3_bucket.www.id
+}
+
+output "website_url" {
+  value = "http://www.${local.domain_name}/"
 }
